@@ -1,0 +1,17 @@
+type Query {
+  todo(id: Int): Todo
+  todos(
+    after: String
+    before: String
+    first: Int
+    last: Int
+    orderBy: [TodoOrder!] = [{ field: CREATED_AT, direction: ASC }]
+  ): TodoConnection!
+  users(
+    after: String
+    before: String
+    first: Int
+    last: Int
+    orderBy: [UserOrder!] = [{ field: CREATED_AT, direction: ASC }]
+  ): UserConnection!
+}

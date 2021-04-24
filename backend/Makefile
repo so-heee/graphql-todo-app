@@ -1,0 +1,22 @@
+LOCAL_MYSQL_ROOT_PASSWORD=root
+LOCAL_MYSQL_USER=user
+LOCAL_MYSQL_PASSWORD=password
+LOCAL_MYSQL_DATABASE=sample
+LOCAL_MYSQL_HOST=localhost
+
+.PHONY: generate
+generate:
+	go run github.com/99designs/gqlgen generate
+
+.PHONY: boil
+boil:
+	sqlboiler mysql
+
+.PHONY: run
+run:
+	MYSQL_ROOT_PASSWORD=$(LOCAL_MYSQL_ROOT_PASSWORD) \
+	MYSQL_USER=$(LOCAL_MYSQL_USER) \
+	MYSQL_PASSWORD=$(LOCAL_MYSQL_PASSWORD) \
+	MYSQL_DATABASE=$(LOCAL_MYSQL_DATABASE) \
+	MYSQL_HOST=$(LOCAL_MYSQL_HOST) \
+	realize start
