@@ -1,8 +1,12 @@
 {
-  "auto-rename-tag.activationOnLanguage": ["*"],
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "editor.renderControlCharacters": true,
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.format.enable": true,
+    "eslint.packageManager": "yarn",
+    "eslint.workingDirectories": ["./src"],
+    "eslint.validate": ["javascript", "vue"],
   }
-}
+  

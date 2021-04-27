@@ -1,4 +1,4 @@
-module github.com/so-heee/next-gqlgen-todo/backend
+module github.com/so-heee/graphql-todo-app/backend
 
 go 1.16
 
