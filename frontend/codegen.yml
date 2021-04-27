@@ -1,0 +1,21 @@
+overwrite: true
+schema: '../schema/*.graphqls'
+documents: 'src/graphql/queries/*.graphql'
+generates:
+  src/graphql/generated/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      # hooksを生成するための設定
+      withHOC: false
+      withComponent: false
+      withHooks: true
+      # gqlgenのcustom scalarをstringとして扱う
+      scalars:
+        Time: string
+    hooks:
+      # ファイルが生成されたあとに、eslintのauto-fixを自動で走らせる
+      afterOneFileWrite:
+        - npx eslint --fix
