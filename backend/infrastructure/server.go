@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/kelseyhightower/envconfig"
-	"github.com/so-heee/graphql-example/plan2/interfaces/database"
+	"github.com/so-heee/graphql-todo-app/backend/interfaces/database"
 )
 
 type Config struct {
@@ -36,6 +36,6 @@ func Run() {
 	}
 	r := Router(repo)
 
-	log.Printf("connect to http://localhost:8080/playground for GraphQL playground")
+	log.Printf("connect to http://localhost:8080/ for GraphQL playground")
 	log.Fatal(http.ListenAndServe(":8080", r))
 }

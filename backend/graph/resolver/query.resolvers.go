@@ -7,8 +7,8 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/so-heee/graphql-example/plan2/domain/model"
-	"github.com/so-heee/graphql-example/plan2/graph/generated"
+	"github.com/so-heee/graphql-todo-app/backend/domain/model"
+	"github.com/so-heee/graphql-todo-app/backend/graph/generated"
 )
 
 func (r *queryResolver) Todo(ctx context.Context, id *int) (*model.Todo, error) {

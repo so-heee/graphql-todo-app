@@ -1,7 +1,7 @@
 package resolver
 
 import (
-	"github.com/so-heee/graphql-example/plan2/interfaces/database"
+	"github.com/so-heee/graphql-todo-app/backend/interfaces/database"
 )
 
 // This file will not be regenerated automatically.

@@ -7,11 +7,11 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/render"
 	"github.com/sirupsen/logrus"
-	"github.com/so-heee/graphql-example/plan2/graph/generated"
-	"github.com/so-heee/graphql-example/plan2/graph/resolver"
+	"github.com/so-heee/graphql-todo-app/backend/graph/generated"
+	"github.com/so-heee/graphql-todo-app/backend/graph/resolver"
 
 	"github.com/rs/cors"
-	"github.com/so-heee/graphql-example/plan2/interfaces/database"
+	"github.com/so-heee/graphql-todo-app/backend/interfaces/database"
 )
 
 func Router(repo *database.Repository) *chi.Mux {
@@ -44,10 +44,10 @@ func Router(repo *database.Repository) *chi.Mux {
 	 */
 
 	// GraphQL endpoint
-	r.Handle("/query", handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: resolver.NewResolver(repo)})))
+	r.Handle("/graphql", handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: resolver.NewResolver(repo)})))
 
 	// GraphQL playground
-	r.Handle("/playground", playground.Handler("GraphQL Playground", "/query"))
+	r.Handle("/", playground.Handler("GraphQL Playground", "/graphql"))
 
 	return r
 }

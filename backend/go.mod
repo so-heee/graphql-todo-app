@@ -12,7 +12,6 @@ require (
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/rs/cors v1.7.0
 	github.com/sirupsen/logrus v1.8.1
-	github.com/so-heee/graphql-example/plan2 v0.0.0-20210424150224-d625467be0a8
 	github.com/spf13/viper v1.7.1
 	github.com/vektah/gqlparser/v2 v2.2.0
 	github.com/volatiletech/null/v8 v8.1.2

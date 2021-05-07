@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/so-heee/graphql-example/plan2/infrastructure"
+	"github.com/so-heee/graphql-todo-app/backend/infrastructure"
 )
 
 func main() {

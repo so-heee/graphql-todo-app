@@ -3,8 +3,8 @@ package database
 import (
 	"context"
 
-	"github.com/so-heee/graphql-example/plan2/domain/model"
-	"github.com/so-heee/graphql-example/plan2/infrastructure/database/models"
+	"github.com/so-heee/graphql-todo-app/backend/domain/model"
+	"github.com/so-heee/graphql-todo-app/backend/infrastructure/database/models"
 )
 
 func (r *Repository) Users(ctx context.Context, paginator *model.Paginator) ([]*models.User, error) {
